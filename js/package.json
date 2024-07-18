@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "proto": "pbjs -t static-module -w commonjs -o src/proto/proto.js  src/proto/*.proto"
+    },
+    "dependencies": {
+        "is": "^3.3.0",
+        "nats": "^2.16.0",
+        "protobufjs": "^7.2.5",
+        "string": "^3.3.3"
+    }
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package nrpc;
+option go_package = "./;nrpc";
+
+enum ResponseResult {
+    Success = 0;
+    Failed = 1;
+    NotAck = 2;
+    InProgress = 3;
+    Term = 4;
+}
+
+message Response {
+	ResponseResult result = 1;  //错误码
+	bytes  data = 2;            //响应结果对象json数据
+    string message = 3;         //错误描述
+}
+
+message Request {
+	string name = 1;    //名称
+    bytes data = 2;    //请求参数对象json数据
+}
